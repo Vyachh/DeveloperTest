@@ -28,3 +28,18 @@ C:\Users\vyach\OneDrive\Документы\GitHub\DeveloperTest\FirstTask\obj\De
 C:\Users\vyach\OneDrive\Документы\GitHub\DeveloperTest\FirstTask\obj\Debug\net7.0\FirstTaskProject.pdb
 C:\Users\vyach\OneDrive\Документы\GitHub\DeveloperTest\FirstTask\obj\Debug\net7.0\FirstTaskProject.genruntimeconfig.cache
 C:\Users\vyach\OneDrive\Документы\GitHub\DeveloperTest\FirstTask\obj\Debug\net7.0\ref\FirstTaskProject.dll
+G:\Мой диск\Coding\DeveloperTest\FirstTask\FirstTask\bin\Debug\net7.0\FirstTaskProject.exe
+G:\Мой диск\Coding\DeveloperTest\FirstTask\FirstTask\bin\Debug\net7.0\FirstTaskProject.deps.json
+G:\Мой диск\Coding\DeveloperTest\FirstTask\FirstTask\bin\Debug\net7.0\FirstTaskProject.runtimeconfig.json
+G:\Мой диск\Coding\DeveloperTest\FirstTask\FirstTask\bin\Debug\net7.0\FirstTaskProject.dll
+G:\Мой диск\Coding\DeveloperTest\FirstTask\FirstTask\bin\Debug\net7.0\FirstTaskProject.pdb
+G:\Мой диск\Coding\DeveloperTest\FirstTask\FirstTask\obj\Debug\net7.0\FirstTaskProject.csproj.AssemblyReference.cache
+G:\Мой диск\Coding\DeveloperTest\FirstTask\FirstTask\obj\Debug\net7.0\FirstTaskProject.GeneratedMSBuildEditorConfig.editorconfig
+G:\Мой диск\Coding\DeveloperTest\FirstTask\FirstTask\obj\Debug\net7.0\FirstTaskProject.AssemblyInfoInputs.cache
+G:\Мой диск\Coding\DeveloperTest\FirstTask\FirstTask\obj\Debug\net7.0\FirstTaskProject.AssemblyInfo.cs
+G:\Мой диск\Coding\DeveloperTest\FirstTask\FirstTask\obj\Debug\net7.0\FirstTaskProject.csproj.CoreCompileInputs.cache
+G:\Мой диск\Coding\DeveloperTest\FirstTask\FirstTask\obj\Debug\net7.0\FirstTaskProject.dll
+G:\Мой диск\Coding\DeveloperTest\FirstTask\FirstTask\obj\Debug\net7.0\refint\FirstTaskProject.dll
+G:\Мой диск\Coding\DeveloperTest\FirstTask\FirstTask\obj\Debug\net7.0\FirstTaskProject.pdb
+G:\Мой диск\Coding\DeveloperTest\FirstTask\FirstTask\obj\Debug\net7.0\FirstTaskProject.genruntimeconfig.cache
+G:\Мой диск\Coding\DeveloperTest\FirstTask\FirstTask\obj\Debug\net7.0\ref\FirstTaskProject.dll

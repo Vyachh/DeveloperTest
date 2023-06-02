@@ -2,7 +2,7 @@
 {
     public enum BodyObesityRate
     {
-        Deficit,
+        Deficit = 1,
         Normal,
         Preobesity,
         ObesityI,
