@@ -142,7 +142,6 @@ G:\Мой диск\Coding\DeveloperTest\BMIWebApi.Test\bin\Debug\net7.0\runtimes
 G:\Мой диск\Coding\DeveloperTest\BMIWebApi.Test\bin\Debug\net7.0\runtimes\win\lib\netcoreapp3.0\System.Windows.Extensions.dll
 G:\Мой диск\Coding\DeveloperTest\BMIWebApi.Test\bin\Debug\net7.0\BMIWebApi.dll
 G:\Мой диск\Coding\DeveloperTest\BMIWebApi.Test\bin\Debug\net7.0\BMIWebApi.pdb
-G:\Мой диск\Coding\DeveloperTest\BMIWebApi.Test\obj\Debug\net7.0\BMIWebApi.Test.csproj.AssemblyReference.cache
 G:\Мой диск\Coding\DeveloperTest\BMIWebApi.Test\obj\Debug\net7.0\BMIWebApi.Test.GeneratedMSBuildEditorConfig.editorconfig
 G:\Мой диск\Coding\DeveloperTest\BMIWebApi.Test\obj\Debug\net7.0\BMIWebApi.Test.AssemblyInfoInputs.cache
 G:\Мой диск\Coding\DeveloperTest\BMIWebApi.Test\obj\Debug\net7.0\BMIWebApi.Test.AssemblyInfo.cs

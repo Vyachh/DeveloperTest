@@ -1,4 +1,5 @@
-﻿using System;
+﻿using FirstTaskProject.Exceptions;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -13,20 +14,13 @@ namespace FirstTaskProject.Model
         {
             try
             {
-                Console.Write("Введите нечетное число N: ");
-                if (int.TryParse(Console.ReadLine(), out int oddNumber))
-                {
-                    string result = MakeSquare(oddNumber);
-                    if (result != "")
-                    {
-                        Print(result);
-                    }
-                }
-                else { Console.WriteLine("Вы ввели четное N."); }
+                Console.Write("Введите нечетное число: ");
+                int.TryParse(Console.ReadLine(), out int oddNumber);
+                Print(MakeSquare(oddNumber));
             }
-            catch (Exception ex)
+            catch (ReturnEvenValueException ex)
             {
-                Console.WriteLine("Ошибка:" + ex.Message);
+                Console.WriteLine("Ошибка: " + ex.Message);
             }
         }
 
@@ -42,21 +36,21 @@ namespace FirstTaskProject.Model
         {
             if (oddInputValue % 2 == 0) // If oddInputValue is an even number, exit the function.
             {
-                Console.WriteLine("Вы ввели четное N.");
-                return "";
+                throw new ReturnEvenValueException("Вы ввели четное значение!");
             }
-            //string result = "";  // Увидел ощутимую разницу в скорости работы между string и StringBuilder.
             StringBuilder result = new();
+            int avgValue = (oddInputValue / 2) + 1;
             for (int row = 1; row <= oddInputValue; row++)
             {
                 for (int col = 1; col <= oddInputValue; col++)
                 {
-                    if (row == oddInputValue / 2 + 1 && col == oddInputValue / 2 + 1) /*result += ' '*/ result.Append(' ');
-                    else /*result += '#'*/result.Append('#');
+                    if (row == avgValue && col == avgValue)
+                        result.Append(' ');
+                    else result.Append('#');
                 }
-                //result += '\n';
                 result.Append('\n');
             }
+
             return result.ToString();
         }
 

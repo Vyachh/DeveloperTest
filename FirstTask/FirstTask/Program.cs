@@ -6,8 +6,8 @@ namespace FirstTaskProject
     {
         static void Main(string[] args)
         {
-            NumberSequencePrinter.Start(); // First Task
-            // SquareWithSpacePrinter.Start(); // Second Task
+            //NumberSequencePrinter.Start(); // First Task
+            SquareWithSpacePrinter.Start(); // Second Task
         }
     }
 }
