@@ -10,14 +10,14 @@
         "projectUniqueName": "G:\\Мой диск\\Coding\\DeveloperTest\\BMIWebApi.Test\\BMIWebApi.Test.csproj",
         "projectName": "BMIWebApi.Test",
         "projectPath": "G:\\Мой диск\\Coding\\DeveloperTest\\BMIWebApi.Test\\BMIWebApi.Test.csproj",
-        "packagesPath": "C:\\Users\\Vyacheslau\\.nuget\\packages\\",
+        "packagesPath": "C:\\Users\\vyach\\.nuget\\packages\\",
         "outputPath": "G:\\Мой диск\\Coding\\DeveloperTest\\BMIWebApi.Test\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\Vyacheslau\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\vyach\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -26,7 +26,6 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-          "C:\\Program Files\\dotnet\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -90,7 +89,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.203\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.302\\RuntimeIdentifierGraph.json"
         }
       }
     },
@@ -100,14 +99,14 @@
         "projectUniqueName": "G:\\Мой диск\\Coding\\DeveloperTest\\BMIWebApi\\BMIWebApi.csproj",
         "projectName": "BMIWebApi",
         "projectPath": "G:\\Мой диск\\Coding\\DeveloperTest\\BMIWebApi\\BMIWebApi.csproj",
-        "packagesPath": "C:\\Users\\Vyacheslau\\.nuget\\packages\\",
+        "packagesPath": "C:\\Users\\vyach\\.nuget\\packages\\",
         "outputPath": "G:\\Мой диск\\Coding\\DeveloperTest\\BMIWebApi\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\Vyacheslau\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\vyach\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -116,7 +115,7 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-          "C:\\Program Files\\dotnet\\library-packs": {},
+          "C:\\Program Files\\dotnet\\sdk\\7.0.302\\Sdks\\Microsoft.NET.Sdk.Web\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -142,6 +141,10 @@
             "AutoMapper.Extensions.Microsoft.DependencyInjection": {
               "target": "Package",
               "version": "[12.0.1, )"
+            },
+            "Bogus": {
+              "target": "Package",
+              "version": "[34.0.2, )"
             },
             "Microsoft.AspNetCore.OpenApi": {
               "target": "Package",
@@ -195,7 +198,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.203\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.302\\RuntimeIdentifierGraph.json"
         }
       }
     }

@@ -33,12 +33,16 @@ namespace BMIWebApi.Repositories
 
         public Pacient GetPacient(string nickName)
         {
-            return context.Pacients.Include(p => p.BMIIndex).FirstOrDefault(p => p.NickName == nickName);
+            return context.Pacients
+                .Include(p => p.BMIIndex)
+                .FirstOrDefault(p => p.NickName == nickName);
         }
 
         public bool Update(Pacient pacient)
         {
-            var existingPacient = context.Pacients.Where(p => p.NickName == pacient.NickName).FirstOrDefault();
+            var existingPacient = context.Pacients
+                .Where(p => p.NickName == pacient.NickName)
+                .FirstOrDefault();
             if (existingPacient == null)
             {
                 return false; // Сущность не найдена, обновление невозможно
@@ -48,15 +52,12 @@ namespace BMIWebApi.Repositories
             return Save();
         }
 
-        public bool Save()
-        {
-            var saved = context.SaveChanges();
-            return saved > 0 ? true : false;
-        }
+        public bool Save() => context.SaveChanges() > 0;
 
         public Pacient GetPacientTrimToUpper(PacientDto pacientDto)
         {
-            return GetPacients().Where(p => p.NickName.Trim().ToUpper() == pacientDto.NickName.TrimEnd().ToUpper())
+            return GetPacients()
+                .Where(p => p.NickName.Trim().ToUpper() == pacientDto.NickName.TrimEnd().ToUpper())
                 .FirstOrDefault();
         }
     }

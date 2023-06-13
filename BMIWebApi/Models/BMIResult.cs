@@ -1,4 +1,6 @@
 ﻿using BMIWebApi.Enums;
+using BMIWebApi.Exceptions;
+using BMIWebApi.Helpers;
 using System.Text;
 
 namespace BMIWebApi.Models
@@ -8,6 +10,25 @@ namespace BMIWebApi.Models
     /// </summary>
     public class BMIResult
     {
+
+        /// <summary>
+        /// Минимальное значение для значения роста (в сантиметрах).
+        /// </summary>
+        private const int MinHeightValue = 50;
+        /// <summary>
+        /// Максимальное значение для значения роста (в сантиметрах).
+        /// </summary>
+        private const int MaxHeightValue = 250;
+        /// <summary>
+        /// Минимальное значение для значения веса (в килограммах).
+        /// </summary>
+        private const int MinWeightValue = 5;
+        /// <summary>
+        /// Максимальное значение для значения веса (в килограммах).
+        /// </summary>
+        private const int MaxWeightValue = 500;
+
+
         public double Index { get; set; }
         public string Description { get; set; }
 
@@ -30,22 +51,22 @@ namespace BMIWebApi.Models
         {
             BodyObesityRate body = BodyObesityRate.ObesityIII;
             string description = "Ожирение III степени (морбидное).";
-            int e = 1;
+            int rate = 1;
 
             foreach (var threshold in BmiThresholds)
-            { 
+            {
                 if (index <= threshold.Key)
                 {
-                    body = (BodyObesityRate)e;
+                    body = (BodyObesityRate)rate;
                     description = threshold.Value;
                     break;
                 }
-                e++;
+                rate++;
             }
-            description += $" Степень ожирения: {(int)body}/6.";  
+            description += $" Степень ожирения: {(int)body}/6.";
+
             return description;
         }
-
 
         /// <summary>
         /// Рассчитывает индекс массы тела (BMI) на основе заданного роста и веса.
@@ -55,27 +76,12 @@ namespace BMIWebApi.Models
         /// <returns>Индекс массы тела (BMI).</returns>
         public static double CalculateBMI(double height, double weight)
         {
+            Validator.ValidateMeasurement(height, MinHeightValue, MaxHeightValue, $"Рост должен быть от {MinHeightValue} до {MaxHeightValue}");
+            Validator.ValidateMeasurement(weight, MinWeightValue, MaxWeightValue, $"Вес должен быть от {MinWeightValue} до {MaxWeightValue}");
+
             return Math.Round(weight / Math.Pow(height / 100, 2), 2);
         }
 
 
-        /// <summary>
-        /// Проверяет, являются ли заданные значения роста и веса допустимыми.
-        /// </summary>
-        /// <param name="height">Рост в сантиметрах.</param>
-        /// <param name="weight">Вес в килограммах.</param>
-        /// <returns>Значение true, если значения роста и веса являются допустимыми, иначе false.</returns>
-        public static bool ValidateMeasurements(double height, double weight)
-        {
-            if (height < 50 || height > 250)
-            {
-                return false;
-            }
-            if (weight < 5 || weight > 500)
-            {
-                return false;
-            }
-            return true;
-        }
     }
 }

@@ -17,7 +17,7 @@ namespace FirstTaskProject.Test.Model
             string expected = "1, 2, 3, 4, 5";
 
             // Act
-            string result = NumberSequencePrinter.CalculateValue(finalValue);
+            string result = NumberSequence.CalculateValue(finalValue);
 
             // Assert
             Assert.Equal(expected, result);
