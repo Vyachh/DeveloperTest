@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace FirstTaskProject.Model
 {
-    public class SquareWithSpacePrinter
+    public class SquareWithSpace
     {
 
         public static void Start()

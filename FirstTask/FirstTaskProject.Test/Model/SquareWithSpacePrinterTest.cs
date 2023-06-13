@@ -17,7 +17,7 @@ namespace FirstTaskProject.Test.Model
             string expected = "#####\n#####\n## ##\n#####\n#####\n";
 
             // Act
-            string result = SquareWithSpacePrinter.MakeSquare(oddInputValue);
+            string result = SquareWithSpace.MakeSquare(oddInputValue);
 
             // Assert
             Assert.Equal(expected, result);

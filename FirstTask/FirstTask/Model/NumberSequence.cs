@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace FirstTaskProject.Model
 {
-    public class NumberSequencePrinter
+    public class NumberSequence
     {
         public static void Start()
         {
