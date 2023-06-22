@@ -10,6 +10,7 @@ namespace BMIWebApi.Helpers
         public MappingProfiles()
         {
             CreateMap<PacientDto, Pacient>();
+            CreateMap<User, Pacient>();
         }
     }
 }

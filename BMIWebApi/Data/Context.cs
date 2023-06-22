@@ -11,7 +11,6 @@ namespace BMIWebApi.Data
         }
         public DbSet<Pacient> Pacients { get; set; }
         public DbSet<BMIThresholds> BMIThresholds { get; set; }
-
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             modelBuilder.Entity<Pacient>()

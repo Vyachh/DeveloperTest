@@ -1,5 +1,6 @@
 ﻿namespace BMIWebApi.Helpers
 {
+
     public class Validator
     {
         /// <summary>
@@ -13,7 +14,9 @@
         public static void ValidateMeasurement(double value, double minValue, double maxValue, string message)
         {
             if (value < minValue || value > maxValue)
+            {
                 throw new ArgumentOutOfRangeException(nameof(value), message);
+            }
         }
     }
 }

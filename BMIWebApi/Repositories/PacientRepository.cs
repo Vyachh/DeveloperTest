@@ -35,7 +35,7 @@ namespace BMIWebApi.Repositories
         {
             return context.Pacients
                 .Include(p => p.BMIIndex)
-                .FirstOrDefault(p => p.NickName == nickName);
+                .FirstOrDefault(p => p.NickName == nickName); 
         }
 
         public bool Update(Pacient pacient)
@@ -54,11 +54,10 @@ namespace BMIWebApi.Repositories
 
         public bool Save() => context.SaveChanges() > 0;
 
-        public Pacient GetPacientTrimToUpper(PacientDto pacientDto)
+        public string GetNickName(string nickName)
         {
-            return GetPacients()
-                .Where(p => p.NickName.Trim().ToUpper() == pacientDto.NickName.TrimEnd().ToUpper())
-                .FirstOrDefault();
+            return context.Pacients
+    .FirstOrDefault(p => p.NickName == nickName).NickName;
         }
     }
 }

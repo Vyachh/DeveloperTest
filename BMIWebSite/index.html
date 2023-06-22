@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/style.css">
+    <link href="https://fonts.cdnfonts.com/css/montserrat" rel="stylesheet">
+    <link rel="icon" href="../assets/icon.svg" type="image/x-icon">
+    <script defer src="../js/modulePages.js"></script>
+    <script defer src="./js/api.js"></script>
+
+    <title>Healthwise clinic</title>
+</head>
+
+<body>
+    <header>
+        <div class="header_container">
+            <h2>
+                <a href="">
+                    <img src="../assets/icon.svg" alt="">
+                    Healthwise
+                </a>
+            </h2>
+            <nav class="header_nav">
+                <a href="/features.html" class="nav_item">Features</a>
+                <a href="" class="nav_item disabled">Pricing</a>
+                <a href="" class="nav_item disabled">Blog</a>
+                <a href="" class="nav_item disabled">About Us</a>
+                <a href="" id="loginBtn" class="bordered_href">Login</a>
+                <a href="" id="registerBtn" class="bordered_href">Register</a>
+            </nav>
+        </div>
+    </header>
+
+    <container class="main_container">
+
+        <div class="auth_container">
+            <div id="login" class="auth-page">
+                <div class="auth-content">
+                    <button class="login-close">&times;</button>
+                    <div class="form">
+                        <h1>Login</h1>
+                        <form action="https://localhost:7213/api/Pacient/Login" method="post" id="login_form">
+                            <input type="text" id="log_nickName">
+                            <input type="password" id="log_password">
+                            <button type="submit">Login</button>
+                        </form>
+                    </div>
+
+                </div>
+            </div>
+            <!-- Login -->
+
+            <div id="register" class="auth-page">
+                <div class="auth-content">
+                    <button class="register-close">&times;</button>
+                    <div class="form">
+                        <h1>Register</h1>
+                        <form action="https://localhost:7213/api/Pacient/create" method="post" id="register_form">
+                            <input name="NickName" id="reg_login" type="text" placeholder="Никнейм">
+                            <input name="password" id="reg_password" type="password" placeholder="Пароль">
+                            <input type="number" id="reg_age" placeholder="Возраст">
+                            <input type="number" id="reg_height" placeholder="Рост">
+                            <input type="number" id="reg_weight" placeholder="Вес">
+                            <button type="submit">Register</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+            <!-- Register -->
+        </div>
+
+    <div class="main_block">
+   
+    </div>
+
+    </container>
+</body>
+
+</html>
