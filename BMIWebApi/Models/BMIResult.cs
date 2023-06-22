@@ -81,7 +81,5 @@ namespace BMIWebApi.Models
 
             return Math.Round(weight / Math.Pow(height / 100, 2), 2);
         }
-
-
     }
 }

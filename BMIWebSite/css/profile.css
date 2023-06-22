@@ -1,0 +1,29 @@
+.user_content {
+    margin: 50px;
+    display: block;
+}
+
+.user_content p{
+    margin: 15px;
+}
+
+.user_change {
+    border-radius: 30px;
+    color: #ececec;
+    border: 1px solid;
+    padding: 10px 20px;
+    font-size: 16px;
+    outline: none;
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+
+.user_change:hover {
+    color: #ecececc0;
+    /* Изменяем цвет фона при наведении */
+}
+
+.user_change:active {
+    color: #ececec77;
+    /* Изменяем цвет фона при активном состоянии (нажатии) */
+}

@@ -80,7 +80,7 @@ namespace BMIWebApi.Test.Controller
             };
 
             // Act
-            var result = controller.AddPacient(pacient);
+            var result = controller.CreatePacient(pacient);
           
             // Assert
             Assert.IsType<OkObjectResult>(result);
@@ -107,7 +107,7 @@ namespace BMIWebApi.Test.Controller
             };
 
             // Act
-            var result = controller.AddPacient(pacient);
+            var result = controller.CreatePacient(pacient);
 
             // Assert
             Assert.IsType<BadRequestObjectResult>(result);

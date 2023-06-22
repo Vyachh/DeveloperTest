@@ -7,7 +7,7 @@ namespace BMIWebApi.Interfaces
     {
         ICollection<Pacient> GetPacients();
         Pacient GetPacient(string nickName);
-        Pacient GetPacientTrimToUpper(PacientDto pacientDto);
+        string GetNickName(string nickName);
         bool Add(Pacient pacient);
         bool Update(Pacient pacient);
         bool Delete(string nickName);

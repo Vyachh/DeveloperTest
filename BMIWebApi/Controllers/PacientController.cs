@@ -6,6 +6,7 @@ using BMIWebApi.Helpers;
 using BMIWebApi.Interfaces;
 using BMIWebApi.Models;
 using Bogus;
+using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using Swashbuckle.AspNetCore.Annotations;
 
@@ -17,6 +18,7 @@ namespace indexWebApi.Controllers
     {
         private readonly IPacientRepository pacientRepository;
         private readonly IMapper mapper;
+
 
         /// <summary>
         /// Минимальное значение для значения роста (в сантиметрах).
@@ -54,7 +56,7 @@ namespace indexWebApi.Controllers
             {
                 Validator.ValidateMeasurement(height, MinHeightValue, MaxHeightValue, $"Рост должен быть от {MinHeightValue} до {MaxHeightValue}");
                 Validator.ValidateMeasurement(weight, MinWeightValue, MaxWeightValue, $"Вес должен быть от {MinWeightValue} до {MaxWeightValue}");
-                
+
                 double index = BMIResult.CalculateBMI(height, weight);
 
                 string description = BMIResult.GetBMIDescription(index);
@@ -82,7 +84,7 @@ namespace indexWebApi.Controllers
         /// </summary>
         /// <param name="pacientDto">DTO пациента.</param>
         /// <returns>Результат операции.</returns>
-        public IActionResult AddPacient([FromForm] PacientDto pacientDto)
+        public IActionResult CreatePacient([FromBody] PacientDto pacientDto)
         {
             if (pacientDto == null)
                 return BadRequest(ModelState);
@@ -91,7 +93,7 @@ namespace indexWebApi.Controllers
             {
                 Validator.ValidateMeasurement(pacientDto.Height, MinHeightValue, MaxHeightValue, $"Рост должен быть от {MinHeightValue} до {MaxHeightValue}");
                 Validator.ValidateMeasurement(pacientDto.Weight, MinWeightValue, MaxWeightValue, $"Вес должен быть от {MinWeightValue} до {MaxWeightValue}");
-                
+
                 var curPacient = pacientRepository.GetPacient(pacientDto.NickName);
                 if (curPacient != null)
                     return BadRequest("Ошибка: Пользователь с таким ником уже существует");
@@ -107,6 +109,7 @@ namespace indexWebApi.Controllers
 
                 pacientMap.BMIIndex = bmiIndex;
 
+
                 if (!pacientRepository.Add(pacientMap))
                 {
                     ModelState.AddModelError("", "Что-то пошло не так. Попробуйте еще раз.");
@@ -119,8 +122,6 @@ namespace indexWebApi.Controllers
             {
                 return BadRequest(ex.Message);
             }
-
-
         }
 
 
@@ -163,40 +164,43 @@ namespace indexWebApi.Controllers
                 return BadRequest(ex.Message);
             }
 
-           
+
         }
 
-        [HttpGet("FakePacient")]
-        public IActionResult AddFakePacients()
-        {
-            for (int i = 0; i < 100; i++)
-            {
-                var fakeAge = new Random().Next(5, 60);
-                var fakeHeight = new Random().Next(51, 200);
-                var fakeWeight = new Random().Next(5, 100);
 
-                var fakePacient = new Faker<Pacient>()
-                    .RuleFor(x => x.NickName, x => x.Person.UserName)
-                    .RuleFor(x => x.FirstName, x => x.Person.FirstName)
-                    .RuleFor(x => x.Surname, x => x.Person.LastName)
-                    .RuleFor(x => x.Patronymic, x => x.Person.FullName)
-                    .RuleFor(x => x.Age, fakeAge)
-                    .RuleFor(x => x.Height, fakeHeight)
-                    .RuleFor(x => x.Weight, fakeWeight);
 
-                var bmiIndex = new BMIIndex
-                {
-                    Index = BMIResult.CalculateBMI(fakeHeight, fakeWeight),
-                    Pacient = fakePacient
-                };
 
-                fakePacient.RuleFor(x => x.BMIIndex, bmiIndex);
-                pacientRepository.Add(fakePacient);
-            }
 
-            return Ok("Успех!");
-        }
+        //[HttpGet("FakePacient")]
+        //public IActionResult AddFakePacients()
+        //{
+        //    for (int i = 0; i < 100; i++)
+        //    {
+        //        var fakeAge = new Random().Next(5, 60);
+        //        var fakeHeight = new Random().Next(51, 200);
+        //        var fakeWeight = new Random().Next(5, 100);
 
+        //        var fakePacient = new Faker<Pacient>()
+        //            .RuleFor(x => x.NickName, x => x.Person.UserName)
+        //            .RuleFor(x => x.FirstName, x => x.Person.FirstName)
+        //            .RuleFor(x => x.Surname, x => x.Person.LastName)
+        //            .RuleFor(x => x.Patronymic, x => x.Person.FullName)
+        //            .RuleFor(x => x.Age, fakeAge)
+        //            .RuleFor(x => x.Height, fakeHeight)
+        //            .RuleFor(x => x.Weight, fakeWeight);
+
+        //        var bmiIndex = new BMIIndex
+        //        {
+        //            Index = BMIResult.CalculateBMI(fakeHeight, fakeWeight),
+        //            Pacient = fakePacient
+        //        };
+
+        //        fakePacient.RuleFor(x => x.BMIIndex, bmiIndex);
+        //        pacientRepository.Add(fakePacient);
+        //    }
+
+        //    return Ok("Успех!");
+        //}
 
     }
 }

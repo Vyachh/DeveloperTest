@@ -5,7 +5,7 @@ VisualStudioVersion = 17.5.33627.172
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BMIWebApi", "BMIWebApi.csproj", "{500E9602-3B9E-46FF-AF10-232FCF6C8FD7}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BMIWebApi.Test", "..\BMIWebApi.Test\BMIWebApi.Test.csproj", "{13E3DDD5-EAB7-433C-8D65-ED7AA18C06EB}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BMIWebApi.Test", "..\BMIWebApi.Test\BMIWebApi.Test.csproj", "{13E3DDD5-EAB7-433C-8D65-ED7AA18C06EB}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
